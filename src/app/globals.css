@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* Paleta clínica de AptoMed (ver PLAN.md › Diseño).
+   Uso en Tailwind: bg-hueso, text-tinta, border-linea, text-salvia, etc. */
+@theme {
+  --color-tinta: #063c41;
+  --color-tinta-suave: #054a4f;
+  --color-tenue: #566b6b;
+  --color-hueso: #f5f4f0;
+  --color-papel: #ffffff;
+  --color-linea: #e4e4dd;
+  /* Verde del logo (#3c886a), oscurecido para que el texto sea legible. */
+  --color-salvia: #2e7458;
+  --color-salvia-claro: #e6f0eb;
+  --color-ambar: #b7791f;
+  --color-ambar-claro: #f6ebd9;
+  --color-rojo: #b42318;
+  --color-rojo-claro: #f8e4e1;
+
+  --font-sans: var(--font-dm-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, Menlo, monospace;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-hueso);
+  color: var(--color-tinta);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-salvia);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--color-salvia-claro);
+}
+
+.cifras {
+  font-variant-numeric: tabular-nums;
+}
